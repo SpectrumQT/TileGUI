@@ -1,3 +1,8 @@
+<h1 align="center">
+  <br>
+  <a href="https://github.com/SpectrumQT/TileGUI"><img src="./Assets/Readme/TileGUI Logo.png" alt="Dear PyGui logo"></a>
+</h1>
+
 <h4 align="center">Simple yet powerful GUI framework for GIMI/SRMI/HIMI</h4>
 
 <p align="center">

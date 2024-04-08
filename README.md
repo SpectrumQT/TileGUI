@@ -1,5 +1,4 @@
 <h1 align="center">
-  <br>
   <a href="https://github.com/SpectrumQT/TileGUI"><img src="./Assets/Readme/TileGUI Logo.png" alt="Dear PyGui logo"></a>
 </h1>
 
@@ -9,7 +8,7 @@
   <a href="#features">Features</a> •
   <a href="#installation">Installation</a> •
   <a href="#how-to-use-as-mod-user">How To Use As Mod User</a> • 
-  <a href="#how-to-use-as-mod-author">How To Use As Mod User</a> • 
+  <a href="#how-to-use-as-mod-author">How To Use As Mod Author</a> • 
   <a href="#resources">Resources</a> •
   <a href="#license">License</a>
 </p>
@@ -37,16 +36,12 @@ Correct path to TileGUI folder should look like:
 
 ## How To Use As Mod User
 
-Just install and that's it. Mods with TileGUI as requirement will handle the rest themselves.
+Just install and that's it. Mods with TileGUI as requirement will handle the rest by themselves.
 
 
 ## How To Use As Mod Author
- 
-```INI
-WIP
 
-```
-<br/>
+Framework is currently in the early alpha-testing phase with no docs ready. Also, while current API is unlikely to change significantly, there's absolutely no guarantee that it'll be compatible with first modder-friendly release. I'd advice to wait for further announcements before jump into.
 
 
 ## Resources

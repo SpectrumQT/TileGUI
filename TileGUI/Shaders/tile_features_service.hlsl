@@ -1,7 +1,7 @@
 // Handles special (re)actions for all tiles, like hover over, overlays, dragging and so on
 // Simplifies and accelerates common GUI logic that would require tons of STORE calls otherwise
 
-Buffer<float4> IniParams : register(t120);
+Texture1D<float4> IniParams : register(t120);
 
 #define WindowWidth IniParams[0].x
 #define WindowHeight IniParams[0].y

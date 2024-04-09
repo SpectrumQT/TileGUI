@@ -1,6 +1,6 @@
 // Updates client's instance storage with given ini variables
 
-Buffer<float4> IniParams : register(t120);
+Texture1D<float4> IniParams : register(t120);
 
 #define CursorX IniParams[0].z
 #define CursorY IniParams[0].w

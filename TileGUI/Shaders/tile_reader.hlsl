@@ -1,4 +1,4 @@
-Buffer<float4> IniParams : register(t120);
+Texture1D<float4> IniParams : register(t120);
 
 #define RequestType IniParams[1].x
 #define TileId IniParams[1].y

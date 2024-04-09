@@ -1,6 +1,6 @@
 // Updates positions of all tiles based on sizes, offsets, anchors and parents
 
-Buffer<float4> IniParams : register(t120);
+Texture1D<float4> IniParams : register(t120);
 
 #define WindowWidth IniParams[0].x
 #define WindowHeight IniParams[0].y

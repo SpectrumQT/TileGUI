@@ -1,6 +1,6 @@
 // Streamlines multiple tiles declaration and property updates both for initialization and runtime
 
-Buffer<float4> IniParams : register(t120);
+Texture1D<float4> IniParams : register(t120);
 
 #define RequestType (IniParams[0].x != 100000 ? IniParams[0].x : -1)
 #define TemplateId (IniParams[0].y != 100000 ? IniParams[0].y : -1)

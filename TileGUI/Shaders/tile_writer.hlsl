@@ -1,6 +1,6 @@
 // Updates client's tile storage with given ini variables
 
-Buffer<float4> IniParams : register(t120);
+Texture1D<float4> IniParams : register(t120);
 
 #define TileType IniParams[1].x
 #define TemplateId IniParams[1].y

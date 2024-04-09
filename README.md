@@ -26,9 +26,9 @@
 
 ## Installation
 
-Download the latest release and extract it to your \3dmigoto\ folder
+Download the [latest release](https://github.com/SpectrumQT/TileGUI/releases) of TileGUI.zip and extract it to your \3dmigoto\ folder
 
-Correct path to TileGUI folder should look like:
+Correct path to extracted TileGUI folder should look like:
 
  ```
  \3dmigoto\Mods\BufferValues\TileGUI
@@ -36,7 +36,7 @@ Correct path to TileGUI folder should look like:
 
 ## How To Use As Mod User
 
-Just install and that's it. Mods with TileGUI as requirement will handle the rest by themselves.
+Just install it if you have any mods requiring TileGUI. Framework won't do anything on its own.
 
 
 ## How To Use As Mod Author

@@ -265,17 +265,17 @@ void ApplyLayout(int tile_id)
         return;
     }
    
-    int total_tiles = LastTileId - FirstTileId + 1;
-    int tile_number = tile_id - LastTileId + total_tiles - 1;
-    int tile_row = tile_number / ColsCount;
-    int tile_col = tile_number % ColsCount;
+    uint total_tiles = LastTileId - FirstTileId + 1;
+    uint tile_number = tile_id - LastTileId + total_tiles - 1;
+    uint tile_row = tile_number / uint(ColsCount);
+    uint tile_col = tile_number % uint(ColsCount);
 
     tile.offset.x += (tile.size.x + ColsPadding) * tile_col;
     tile.offset.y += (tile.size.y + RowsPadding) * tile_row;
 
     tile.anchor.x = AnchorX;
     tile.anchor.y = AnchorY;
-
+    
     // Quick, dirty but efficient approach to anchor entire layout
     // Relies heavily on current position_service implementation and trusts it blindly, leaving the rest of the work to it
     if (AnchorX == 0) {
@@ -291,6 +291,7 @@ void ApplyLayout(int tile_id)
 
     // DebugRW[tile_id] = float4(tile_col, tile_row, tile.offset.x, tile.offset.y);
     // DebugRW[tile_id] = float4(AnchorX, AnchorY, tile.offset.x, tile.offset.y);
+
     TilesRW[tile_id] = tile;
 }
 

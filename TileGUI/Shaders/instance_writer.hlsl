@@ -4,6 +4,8 @@
 
 Texture1D<float4> IniParams : register(t120);
 
+// #define WindowWidth IniParams[0].x
+// #define WindowHeight IniParams[0].y
 #define CursorX IniParams[0].z
 #define CursorY IniParams[0].w
 

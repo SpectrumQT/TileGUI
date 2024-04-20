@@ -1,15 +1,63 @@
 
-#include "instance_model.hlsl"
-#include "tile_model.hlsl"
-
 Texture1D<float4> IniParams : register(t120);
 
 #define RequestType IniParams[1].x
 #define TileId IniParams[1].y
 #define VarId IniParams[1].z
 
+struct Instance {
+	float max_tiles_count;
+	float max_layers_count;
+	float2 unused1;
+
+    float drag_tile_id;
+	float2 drag_pos;
+	float1 unused2;
+    
+	float4 unused3;
+};
+
 StructuredBuffer<Instance> InstanceContainer : register(t121);
 #define Instance InstanceContainer[0]
+
+struct Tile {
+    // Base config
+	float sys_state_id;
+	float layer_id;
+	float parent_tile_id;
+	float template_id;
+    // Features config
+	float show;
+	float select;
+	float clamp;
+	float track_mouse;
+    // Advanced features config
+    float loop_start;
+    float loop_method;
+    float hover_overlay_tile_id;
+    float select_overlay_tile_id;
+    // Display config
+	float2 size;
+	float texture_id;
+	float tex_arr_id;
+    // Texture config
+    float4 tex_uv;
+	// Texture config 2
+	float opacity;
+	float saturation;
+	float2 reserved_1;
+    // Layout config
+	float2 offset;
+	float2 anchor;
+    // Current state
+    float loop_stage;
+	float is_hovered_over;
+	float2 reserved_2;
+    // Absolute coords of current position
+	float4 abs_pos;
+    // Relative coords of current position
+	float4 rel_pos;
+};
 
 StructuredBuffer<Tile> Tiles : register(t122);
 RWBuffer<float> OutputRW : register(u0);

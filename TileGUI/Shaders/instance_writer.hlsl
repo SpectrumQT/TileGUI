@@ -1,7 +1,5 @@
 // Updates client's instance storage with given ini variables
 
-#include "instance_model.hlsl"
-
 Texture1D<float4> IniParams : register(t120);
 
 // #define WindowWidth IniParams[0].x
@@ -13,6 +11,18 @@ Texture1D<float4> IniParams : register(t120);
 #define MaxLayersCount IniParams[10].y
 
 #define DragTileId IniParams[15].x
+
+struct Instance {
+	float max_tiles_count;
+	float max_layers_count;
+	float2 unused1;
+
+    float drag_tile_id;
+	float2 drag_pos;
+	float1 unused2;
+    
+	float4 unused3;
+};
 
 RWStructuredBuffer<Instance> InstanceContainerRW : register(u0);
 #define CurrentInstance InstanceContainerRW[0]

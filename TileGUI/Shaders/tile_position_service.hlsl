@@ -1,7 +1,5 @@
 // Updates positions of all tiles based on sizes, offsets, anchors and parents
 
-#include "tile_model.hlsl"
-
 Texture1D<float4> IniParams : register(t120);
 
 #define WindowWidth IniParams[0].x
@@ -10,6 +8,45 @@ Texture1D<float4> IniParams : register(t120);
 #define MaxParentRecursion (IniParams[1].x <= 8 ? IniParams[1].x : 0)
 
 #define RootParentCoords float4(0, 0, IniParams[0].x, IniParams[0].y)
+
+struct Tile {
+    // Base config
+	float sys_state_id;
+	float layer_id;
+	float parent_tile_id;
+	float template_id;
+    // Features config
+	float show;
+	float select;
+	float clamp;
+	float track_mouse;
+    // Advanced features config
+    float loop_start;
+    float loop_method;
+    float hover_overlay_tile_id;
+    float select_overlay_tile_id;
+    // Display config
+	float2 size;
+	float texture_id;
+	float tex_arr_id;
+    // Texture config
+    float4 tex_uv;
+	// Texture config 2
+	float opacity;
+	float saturation;
+	float2 reserved_1;
+    // Layout config
+	float2 offset;
+	float2 anchor;
+    // Current state
+    float loop_stage;
+	float is_hovered_over;
+	float2 reserved_2;
+    // Absolute coords of current position
+	float4 abs_pos;
+    // Relative coords of current position
+	float4 rel_pos;
+};
 
 RWStructuredBuffer<Tile> TilesRW : register(u1);
 //RWBuffer<float4> DebugRW : register(u7);
